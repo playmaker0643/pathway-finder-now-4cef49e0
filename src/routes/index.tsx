@@ -136,26 +136,26 @@ function HomePage() {
       </section>
 
       {/* Mini About */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
+        <div className="grid grid-cols-2 items-center gap-4 sm:gap-8 lg:gap-12">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
+            <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-eyebrow sm:text-xs">
               About Us
             </p>
-            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
-              Science. Innovation. <span className="text-gradient-brand">Impact.</span>
+            <h2 className="mt-2 text-lg font-extrabold leading-tight text-foreground sm:mt-3 sm:text-3xl lg:text-4xl">
+              Science. Innovation. <span className="text-foreground">Impact.</span>
             </h2>
-            <p className="mt-5 max-w-xl text-muted-foreground">
+            <p className="mt-2 max-w-xl text-[10px] text-muted-foreground sm:mt-5 sm:text-base">
               Ecomedic Squad is a research-driven organization focused on exploring the intersection
               of drugs and diseases. Our mission is to uncover new insights, validate therapeutic
               targets, and accelerate the development of safe and effective treatments.
             </p>
             <a
               href="/about"
-              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-neon-cyan hover:underline"
+              className="mt-3 inline-flex items-center gap-1 text-[10px] font-semibold text-neon-cyan hover:underline sm:mt-6 sm:gap-1.5 sm:text-sm"
             >
               Know More About Us
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
             </a>
           </div>
           <div className="relative">
