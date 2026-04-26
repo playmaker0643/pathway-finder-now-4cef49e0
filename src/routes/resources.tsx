@@ -69,7 +69,7 @@ function ResourcesPage() {
   return (
     <PageShell>
       <section className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:px-6 sm:pt-20 lg:px-8">
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="grid grid-cols-2 items-center gap-4 sm:gap-8 lg:gap-12">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
               Resources
