@@ -79,7 +79,7 @@ function AboutPage() {
               </div>
               <div>
                 <h2 className="text-xl font-bold text-foreground">Our Specialized Methodology</h2>
-                <p className="mt-2 text-muted-foreground">
+                <p className="mt-2 text-muted-foreground text-xl sm:text-2xl">
                   A deeper explanation of how the squad integrates molecular modeling, AI, and
                   clinical insights to find new therapeutic pathways and validate them rigorously.
                 </p>
