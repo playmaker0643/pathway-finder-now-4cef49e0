@@ -4,6 +4,7 @@ import { PageShell } from "@/components/site/PageShell";
 import heroImage from "@/assets/hero-capsule.png";
 import labImage from "@/assets/lab-microscope.jpg";
 import collaborationImage from "@/assets/research-collaboration.jpg";
+import researchImpactImage from "@/assets/research-impact.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -85,7 +86,7 @@ function HomePage() {
     <PageShell>
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-4 pt-8 pb-16 sm:px-6 lg:px-8 lg:pt-20 lg:pb-20">
-        <div className="grid grid-cols-2 items-center gap-4 sm:gap-8 lg:gap-12">
+        <div className="flex flex-col-reverse gap-6 sm:grid sm:grid-cols-2 sm:items-center sm:gap-8 lg:gap-12">
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-neon-pink/40 bg-surface/60 px-2 py-1 text-[9px] font-medium text-foreground sm:gap-2 sm:px-4 sm:py-1.5 sm:text-xs">
               <span className="h-1 w-1 rounded-full bg-neon-pink shadow-[0_0_8px_oklch(0.72_0.27_350)] sm:h-1.5 sm:w-1.5" />
@@ -138,7 +139,7 @@ function HomePage() {
       {/* Stats */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-border/60 bg-surface/70 p-3 backdrop-blur sm:p-8">
-          <div className="grid grid-cols-4 gap-2 sm:gap-8">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-8">
             {stats.map(({ icon: Icon, value, label, sub }, i) => {
               const c = statColors[i % statColors.length];
               return (
@@ -158,7 +159,7 @@ function HomePage() {
 
       {/* Mini About */}
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
-        <div className="grid grid-cols-2 items-center gap-4 sm:gap-8 lg:gap-12">
+        <div className="flex flex-col-reverse gap-6 sm:grid sm:grid-cols-2 sm:items-center sm:gap-8 lg:gap-12">
           <div>
             <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-eyebrow sm:text-xs">
               About Us
@@ -219,7 +220,7 @@ function HomePage() {
           </h2>
         </div>
 
-        <div className="mt-6 grid grid-cols-5 gap-2 sm:mt-10 sm:gap-5">
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-10 sm:grid-cols-5 sm:gap-5">
           {researchAreas.map(({ icon: Icon, title, desc, color, border }) => (
             <article
               key={title}
@@ -232,6 +233,21 @@ function HomePage() {
               <p className="mt-1 text-[9px] leading-snug text-muted-foreground sm:mt-2 sm:text-sm">{desc}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* Research impact banner — sits between Research Areas and footer CTA */}
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="relative">
+          <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-brand opacity-20 blur-3xl" />
+          <img
+            src={researchImpactImage}
+            alt="Scientists in a neon-lit research lab analyzing molecular structures and data visualizations"
+            width={1536}
+            height={768}
+            loading="lazy"
+            className="aspect-[2/1] w-full rounded-2xl border border-border/60 object-cover"
+          />
         </div>
       </section>
     </PageShell>
