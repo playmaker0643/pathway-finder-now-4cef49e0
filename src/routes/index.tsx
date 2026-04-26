@@ -144,12 +144,12 @@ function HomePage() {
               const c = statColors[i % statColors.length];
               return (
                 <div key={label} className="text-center">
-                  <div className={`mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full border ${c.border} ${c.color} sm:mb-3 sm:h-14 sm:w-14`}>
-                    <Icon className="h-4 w-4 sm:h-6 sm:w-6" />
+                  <div className={`mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full border ${c.border} ${c.color} sm:mb-3 sm:h-14 sm:w-14`}>
+                    <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
-                  <div className="text-base font-extrabold text-foreground sm:text-4xl">{value}</div>
-                  <div className="mt-0.5 text-[9px] font-medium leading-tight text-foreground sm:mt-1 sm:text-sm">{label}</div>
-                  <div className="text-[8px] leading-tight text-muted-foreground sm:text-xs">{sub}</div>
+                  <div className="text-xl font-extrabold text-foreground sm:text-4xl">{value}</div>
+                  <div className="mt-1 text-sm font-medium leading-tight text-foreground sm:text-base">{label}</div>
+                  <div className="mt-0.5 text-xs leading-tight text-muted-foreground sm:text-sm">{sub}</div>
                 </div>
               );
             })}
