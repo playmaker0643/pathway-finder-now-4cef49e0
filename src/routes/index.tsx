@@ -179,7 +179,7 @@ function HomePage() {
             Our Research Areas
           </p>
           <h2 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
-            Focused. Relevant. <span className="text-gradient-brand">Real-world Impact.</span>
+            Focused. Relevant. Real-world Impact.
           </h2>
         </div>
 
