@@ -2,41 +2,47 @@ import { Link } from "@tanstack/react-router";
 
 export function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-2 group" aria-label="Ecomedic Squad — Home">
-      <div className="relative flex h-10 w-10 items-center justify-center">
+    <Link to="/" className="group flex items-center gap-3" aria-label="Ecomedic Squad — Home">
+      <div className="relative flex h-14 w-14 items-center justify-center">
         <svg
-          viewBox="0 0 40 40"
-          className="h-10 w-10 drop-shadow-[0_0_10px_oklch(0.72_0.27_350/0.6)]"
+          viewBox="0 0 56 56"
+          className="h-14 w-14 drop-shadow-[0_0_12px_oklch(0.72_0.27_350/0.55)]"
           aria-hidden="true"
         >
           <defs>
-            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="oklch(0.72 0.27 350)" />
-              <stop offset="50%" stopColor="oklch(0.65 0.23 295)" />
+            <linearGradient id="logoGradTop" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="oklch(0.8 0.2 70)" />
+              <stop offset="50%" stopColor="oklch(0.72 0.27 350)" />
+              <stop offset="100%" stopColor="oklch(0.65 0.23 295)" />
+            </linearGradient>
+            <linearGradient id="logoGradBot" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="oklch(0.65 0.23 295)" />
               <stop offset="100%" stopColor="oklch(0.85 0.16 200)" />
             </linearGradient>
           </defs>
+          {/* Upward triangle */}
           <path
-            d="M20 4 L34 14 L28 30 L12 30 L6 14 Z"
+            d="M28 4 L46 22 L10 22 Z"
             fill="none"
-            stroke="url(#logoGrad)"
+            stroke="url(#logoGradTop)"
             strokeWidth="2.5"
             strokeLinejoin="round"
           />
+          {/* Downward chevron */}
           <path
-            d="M14 18 L20 26 L26 18"
+            d="M14 32 L28 52 L42 32"
             fill="none"
-            stroke="url(#logoGrad)"
+            stroke="url(#logoGradBot)"
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
         </svg>
       </div>
-      <span className="text-gradient-brand text-xl font-extrabold leading-none tracking-tight">
+      <span className="text-gradient-brand text-2xl font-extrabold leading-[0.95] tracking-tight">
         Ecomedic
         <br />
-        <span className="text-base">Squad</span>
+        Squad
       </span>
     </Link>
   );
