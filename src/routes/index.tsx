@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Search, FlaskConical, HeartPulse, Users, Atom, Microscope, ClipboardList, ShieldCheck, BarChart3 } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import heroImage from "@/assets/hero-capsule.png";
+import labImage from "@/assets/lab-microscope.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
