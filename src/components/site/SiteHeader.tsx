@@ -29,7 +29,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-3">
             <ThemeToggle />
             <a
-              href="https://ecomedicblogs.codebreakers.uk"
+              href="https://blog.ecomed.codebreakers.uk"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden items-center justify-center rounded-full border border-neon-pink/60 px-5 py-2 text-sm font-semibold text-foreground transition-all hover:border-neon-pink hover:shadow-neon sm:inline-flex"
