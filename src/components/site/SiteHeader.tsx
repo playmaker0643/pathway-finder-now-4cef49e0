@@ -70,10 +70,13 @@ export function SiteHeader() {
 
       {open && (
         <div className="border-t border-border/40 bg-background/95 lg:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4" aria-label="Mobile">
+          <nav
+            className="mx-auto flex max-w-7xl flex-row flex-wrap items-center justify-center gap-x-3 gap-y-2 px-4 py-3"
+            aria-label="Mobile"
+          >
             {navItems.map((item) => {
               const cls =
-                "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-surface hover:text-foreground data-[status=active]:bg-surface data-[status=active]:text-foreground";
+                "rounded-md px-2 py-1 text-xs font-medium text-muted-foreground transition-colors hover:bg-surface hover:text-foreground data-[status=active]:text-foreground";
               return item.kind === "route" ? (
                 <Link
                   key={item.label}
@@ -90,20 +93,6 @@ export function SiteHeader() {
                 </a>
               );
             })}
-            <Link
-              to="/privacy-policy"
-              onClick={() => setOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-surface hover:text-foreground"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/terms"
-              onClick={() => setOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-surface hover:text-foreground"
-            >
-              Terms &amp; Conditions
-            </Link>
           </nav>
         </div>
       )}

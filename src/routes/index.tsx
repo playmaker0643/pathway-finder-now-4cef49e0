@@ -39,27 +39,44 @@ const researchAreas = [
     icon: Atom,
     title: "Drug Discovery",
     desc: "Identifying and validating novel drug candidates through advanced methodologies.",
+    color: "text-neon-pink",
+    border: "border-neon-pink/40",
   },
   {
     icon: Microscope,
     title: "Disease Mechanisms",
     desc: "Understanding the molecular and cellular mechanisms of complex diseases.",
+    color: "text-neon-cyan",
+    border: "border-neon-cyan/40",
   },
   {
     icon: ClipboardList,
     title: "Preclinical Studies",
     desc: "Conducting in vitro and in vivo studies to assess safety and efficacy.",
+    color: "text-neon-purple",
+    border: "border-neon-purple/40",
   },
   {
     icon: ShieldCheck,
     title: "Therapeutic Validation",
     desc: "Validating therapeutic targets and biomarkers for better outcomes.",
+    color: "text-[oklch(0.8_0.18_70)]",
+    border: "border-[oklch(0.8_0.18_70)]/40",
   },
   {
     icon: BarChart3,
     title: "Data & Bioinformatics",
     desc: "Leveraging data science and bioinformatics for research insights.",
+    color: "text-[oklch(0.7_0.2_145)]",
+    border: "border-[oklch(0.7_0.2_145)]/40",
   },
+];
+
+const statColors = [
+  { color: "text-neon-pink", border: "border-neon-pink/50" },
+  { color: "text-neon-cyan", border: "border-neon-cyan/50" },
+  { color: "text-neon-purple", border: "border-neon-purple/50" },
+  { color: "text-[oklch(0.8_0.18_70)]", border: "border-[oklch(0.8_0.18_70)]/50" },
 ];
 
 function HomePage() {
@@ -119,18 +136,21 @@ function HomePage() {
 
       {/* Stats */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-border/60 bg-surface/70 p-6 backdrop-blur sm:p-8">
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
-            {stats.map(({ icon: Icon, value, label, sub }) => (
-              <div key={label} className="text-center">
-                <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-neon-purple/50 text-neon-purple">
-                  <Icon className="h-6 w-6" />
+        <div className="rounded-2xl border border-border/60 bg-surface/70 p-3 backdrop-blur sm:p-8">
+          <div className="grid grid-cols-4 gap-2 sm:gap-8">
+            {stats.map(({ icon: Icon, value, label, sub }, i) => {
+              const c = statColors[i % statColors.length];
+              return (
+                <div key={label} className="text-center">
+                  <div className={`mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full border ${c.border} ${c.color} sm:mb-3 sm:h-14 sm:w-14`}>
+                    <Icon className="h-4 w-4 sm:h-6 sm:w-6" />
+                  </div>
+                  <div className="text-base font-extrabold text-foreground sm:text-4xl">{value}</div>
+                  <div className="mt-0.5 text-[9px] font-medium leading-tight text-foreground sm:mt-1 sm:text-sm">{label}</div>
+                  <div className="text-[8px] leading-tight text-muted-foreground sm:text-xs">{sub}</div>
                 </div>
-                <div className="text-3xl font-extrabold text-foreground sm:text-4xl">{value}</div>
-                <div className="mt-1 text-sm font-medium text-foreground">{label}</div>
-                <div className="text-xs text-muted-foreground">{sub}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -183,17 +203,17 @@ function HomePage() {
           </h2>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-          {researchAreas.map(({ icon: Icon, title, desc }) => (
+        <div className="mt-6 grid grid-cols-5 gap-2 sm:mt-10 sm:gap-5">
+          {researchAreas.map(({ icon: Icon, title, desc, color, border }) => (
             <article
               key={title}
-              className="rounded-2xl border border-border/60 bg-surface/70 p-6 transition-all hover:border-neon-pink/50 hover:shadow-neon"
+              className="rounded-xl border border-border/60 bg-surface/70 p-2 transition-all hover:border-neon-pink/50 hover:shadow-neon sm:rounded-2xl sm:p-6"
             >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-neon-cyan/40 text-neon-cyan">
-                <Icon className="h-6 w-6" />
+              <div className={`mb-2 flex h-7 w-7 items-center justify-center rounded-md border ${border} ${color} sm:mb-4 sm:h-12 sm:w-12 sm:rounded-xl`}>
+                <Icon className="h-3.5 w-3.5 sm:h-6 sm:w-6" />
               </div>
-              <h3 className="text-base font-bold text-foreground">{title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+              <h3 className="text-[10px] font-bold leading-tight text-foreground sm:text-base">{title}</h3>
+              <p className="mt-1 text-[9px] leading-snug text-muted-foreground sm:mt-2 sm:text-sm">{desc}</p>
             </article>
           ))}
         </div>
