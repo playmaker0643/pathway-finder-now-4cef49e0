@@ -5,9 +5,10 @@ import { Logo } from "./Logo";
 
 const navItems = [
   { to: "/", label: "Home" },
+  { to: "/research", label: "Research", external: true },
+  { to: "/publications", label: "Publications", external: true },
+  { to: "/resources", label: "Resources", external: true },
   { to: "/about", label: "About Us" },
-  { to: "/privacy-policy", label: "Privacy Policy" },
-  { to: "/terms", label: "Terms & Conditions" },
 ] as const;
 
 export function SiteHeader() {
