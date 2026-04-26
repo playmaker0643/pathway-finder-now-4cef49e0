@@ -144,12 +144,12 @@ function HomePage() {
               const c = statColors[i % statColors.length];
               return (
                 <div key={label} className="text-center">
-                  <div className={`mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full border ${c.border} ${c.color} sm:mb-3 sm:h-14 sm:w-14`}>
-                    <Icon className="h-4 w-4 sm:h-6 sm:w-6" />
+                  <div className={`mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full border ${c.border} ${c.color} sm:mb-3 sm:h-14 sm:w-14`}>
+                    <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
-                  <div className="text-base font-extrabold text-foreground sm:text-4xl">{value}</div>
-                  <div className="mt-0.5 text-[9px] font-medium leading-tight text-foreground sm:mt-1 sm:text-sm">{label}</div>
-                  <div className="text-[8px] leading-tight text-muted-foreground sm:text-xs">{sub}</div>
+                  <div className="text-xl font-extrabold text-foreground sm:text-4xl">{value}</div>
+                  <div className="mt-1 text-sm font-medium leading-tight text-foreground sm:text-base">{label}</div>
+                  <div className="mt-0.5 text-xs leading-tight text-muted-foreground sm:text-sm">{sub}</div>
                 </div>
               );
             })}
@@ -167,7 +167,7 @@ function HomePage() {
             <h2 className="mt-2 text-lg font-extrabold leading-tight text-foreground sm:mt-3 sm:text-3xl lg:text-4xl">
               Science. Innovation. <span className="text-foreground">Impact.</span>
             </h2>
-            <p className="mt-2 max-w-xl text-sm text-muted-foreground sm:mt-5 sm:text-base">
+            <p className="mt-2 max-w-xl text-base text-muted-foreground sm:mt-5 sm:text-lg">
               Ecomedic Squad is a research-driven organization focused on exploring the intersection
               of drugs and diseases. Our mission is to uncover new insights, validate therapeutic
               targets, and accelerate the development of safe and effective treatments.
@@ -224,15 +224,57 @@ function HomePage() {
           {researchAreas.map(({ icon: Icon, title, desc, color, border }) => (
             <article
               key={title}
-              className="rounded-xl border border-border/60 bg-surface/70 p-2 transition-all hover:border-neon-pink/50 hover:shadow-neon sm:rounded-2xl sm:p-6"
+              className="rounded-xl border border-border/60 bg-surface/70 p-3 transition-all hover:border-neon-pink/50 hover:shadow-neon sm:rounded-2xl sm:p-6"
             >
-              <div className={`mb-2 flex h-7 w-7 items-center justify-center rounded-md border ${border} ${color} sm:mb-4 sm:h-12 sm:w-12 sm:rounded-xl`}>
-                <Icon className="h-3.5 w-3.5 sm:h-6 sm:w-6" />
+              <div className={`mb-2 flex h-9 w-9 items-center justify-center rounded-md border ${border} ${color} sm:mb-4 sm:h-12 sm:w-12 sm:rounded-xl`}>
+                <Icon className="h-4 w-4 sm:h-6 sm:w-6" />
               </div>
-              <h3 className="text-[10px] font-bold leading-tight text-foreground sm:text-base">{title}</h3>
-              <p className="mt-1 text-[9px] leading-snug text-muted-foreground sm:mt-2 sm:text-sm">{desc}</p>
+              <h3 className="text-sm font-bold leading-tight text-foreground sm:text-base">{title}</h3>
+              <p className="mt-1.5 text-sm leading-snug text-muted-foreground sm:mt-2">{desc}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* Why choose us */}
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
+            Why Ecomedic Squad
+          </p>
+          <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground sm:text-4xl">
+            Built on Science. Driven by Purpose.
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-base text-muted-foreground sm:text-lg">
+            We combine cutting-edge laboratory research with computational biology and global
+            collaboration to translate scientific discovery into measurable healthcare outcomes.
+            From early target identification to therapeutic validation, every project is guided by
+            rigor, ethics, and impact.
+          </p>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-3 sm:gap-6">
+          <article className="rounded-2xl border border-border/60 bg-surface/70 p-5 sm:p-6">
+            <h3 className="text-base font-bold text-foreground sm:text-lg">Scientific Rigor</h3>
+            <p className="mt-2 text-base text-muted-foreground">
+              Reproducible methods, peer-reviewed pipelines, and transparent data practices anchor
+              every study we conduct.
+            </p>
+          </article>
+          <article className="rounded-2xl border border-border/60 bg-surface/70 p-5 sm:p-6">
+            <h3 className="text-base font-bold text-foreground sm:text-lg">Global Collaboration</h3>
+            <p className="mt-2 text-base text-muted-foreground">
+              We partner with universities, hospitals, and biotech innovators worldwide to expand
+              what is possible in modern medicine.
+            </p>
+          </article>
+          <article className="rounded-2xl border border-border/60 bg-surface/70 p-5 sm:p-6">
+            <h3 className="text-base font-bold text-foreground sm:text-lg">Real-World Impact</h3>
+            <p className="mt-2 text-base text-muted-foreground">
+              Our research informs clinicians, shapes therapies, and delivers solutions that improve
+              patient outcomes across the globe.
+            </p>
+          </article>
         </div>
       </section>
 
