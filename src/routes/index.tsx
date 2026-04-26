@@ -4,6 +4,7 @@ import { PageShell } from "@/components/site/PageShell";
 import heroImage from "@/assets/hero-capsule.png";
 import labImage from "@/assets/lab-microscope.jpg";
 import collaborationImage from "@/assets/research-collaboration.jpg";
+import researchImpactImage from "@/assets/research-impact.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -85,7 +86,7 @@ function HomePage() {
     <PageShell>
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-4 pt-8 pb-16 sm:px-6 lg:px-8 lg:pt-20 lg:pb-20">
-        <div className="grid grid-cols-2 items-center gap-4 sm:gap-8 lg:gap-12">
+        <div className="flex flex-col-reverse gap-6 sm:grid sm:grid-cols-2 sm:items-center sm:gap-8 lg:gap-12">
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-neon-pink/40 bg-surface/60 px-2 py-1 text-[9px] font-medium text-foreground sm:gap-2 sm:px-4 sm:py-1.5 sm:text-xs">
               <span className="h-1 w-1 rounded-full bg-neon-pink shadow-[0_0_8px_oklch(0.72_0.27_350)] sm:h-1.5 sm:w-1.5" />
