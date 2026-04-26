@@ -193,6 +193,21 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Collaboration banner image */}
+      <section className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+        <div className="relative">
+          <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-brand opacity-20 blur-3xl" />
+          <img
+            src={collaborationImage}
+            alt="Scientists collaborating around a glowing holographic DNA helix in a neon-lit research lab"
+            width={1536}
+            height={768}
+            loading="lazy"
+            className="aspect-[2/1] w-full rounded-2xl border border-border/60 object-cover"
+          />
+        </div>
+      </section>
+
       {/* Research areas */}
       <section id="research" className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
         <div className="text-center">
