@@ -224,13 +224,13 @@ function HomePage() {
           {researchAreas.map(({ icon: Icon, title, desc, color, border }) => (
             <article
               key={title}
-              className="rounded-xl border border-border/60 bg-surface/70 p-2 transition-all hover:border-neon-pink/50 hover:shadow-neon sm:rounded-2xl sm:p-6"
+              className="rounded-xl border border-border/60 bg-surface/70 p-3 transition-all hover:border-neon-pink/50 hover:shadow-neon sm:rounded-2xl sm:p-6"
             >
-              <div className={`mb-2 flex h-7 w-7 items-center justify-center rounded-md border ${border} ${color} sm:mb-4 sm:h-12 sm:w-12 sm:rounded-xl`}>
-                <Icon className="h-3.5 w-3.5 sm:h-6 sm:w-6" />
+              <div className={`mb-2 flex h-9 w-9 items-center justify-center rounded-md border ${border} ${color} sm:mb-4 sm:h-12 sm:w-12 sm:rounded-xl`}>
+                <Icon className="h-4 w-4 sm:h-6 sm:w-6" />
               </div>
-              <h3 className="text-[10px] font-bold leading-tight text-foreground sm:text-base">{title}</h3>
-              <p className="mt-1 text-[9px] leading-snug text-muted-foreground sm:mt-2 sm:text-sm">{desc}</p>
+              <h3 className="text-sm font-bold leading-tight text-foreground sm:text-base">{title}</h3>
+              <p className="mt-1.5 text-sm leading-snug text-muted-foreground sm:mt-2">{desc}</p>
             </article>
           ))}
         </div>
