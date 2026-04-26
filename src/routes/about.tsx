@@ -86,7 +86,7 @@ function AboutPage() {
               </div>
               <div>
                 <h2 className="text-xl font-bold text-foreground">Community &amp; Ethics</h2>
-                <p className="mt-2 text-muted-foreground">
+                <p className="mt-2 text-muted-foreground text-xl sm:text-2xl">
                   We are dedicated to ethical research, collaboration, and community outreach — making
                   science accessible and our work meaningful for better health outcomes everywhere.
                 </p>
