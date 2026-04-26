@@ -3,6 +3,7 @@ import { ArrowRight, Search, FlaskConical, HeartPulse, Users, Atom, Microscope, 
 import { PageShell } from "@/components/site/PageShell";
 import heroImage from "@/assets/hero-capsule.png";
 import labImage from "@/assets/lab-microscope.jpg";
+import collaborationImage from "@/assets/research-collaboration.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
