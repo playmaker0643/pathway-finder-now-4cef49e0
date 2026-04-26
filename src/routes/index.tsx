@@ -92,7 +92,7 @@ function HomePage() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-neon transition-transform hover:scale-[1.03]"
               >
-                Start
+                Explore Our Research
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
               <a
