@@ -203,17 +203,17 @@ function HomePage() {
           </h2>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-          {researchAreas.map(({ icon: Icon, title, desc }) => (
+        <div className="mt-6 grid grid-cols-5 gap-2 sm:mt-10 sm:gap-5">
+          {researchAreas.map(({ icon: Icon, title, desc, color, border }) => (
             <article
               key={title}
-              className="rounded-2xl border border-border/60 bg-surface/70 p-6 transition-all hover:border-neon-pink/50 hover:shadow-neon"
+              className="rounded-xl border border-border/60 bg-surface/70 p-2 transition-all hover:border-neon-pink/50 hover:shadow-neon sm:rounded-2xl sm:p-6"
             >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-neon-cyan/40 text-neon-cyan">
-                <Icon className="h-6 w-6" />
+              <div className={`mb-2 flex h-7 w-7 items-center justify-center rounded-md border ${border} ${color} sm:mb-4 sm:h-12 sm:w-12 sm:rounded-xl`}>
+                <Icon className="h-3.5 w-3.5 sm:h-6 sm:w-6" />
               </div>
-              <h3 className="text-base font-bold text-foreground">{title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+              <h3 className="text-[10px] font-bold leading-tight text-foreground sm:text-base">{title}</h3>
+              <p className="mt-1 text-[9px] leading-snug text-muted-foreground sm:mt-2 sm:text-sm">{desc}</p>
             </article>
           ))}
         </div>
