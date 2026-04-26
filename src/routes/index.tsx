@@ -236,6 +236,48 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Why choose us */}
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
+            Why Ecomedic Squad
+          </p>
+          <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground sm:text-4xl">
+            Built on Science. Driven by Purpose.
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-base text-muted-foreground sm:text-lg">
+            We combine cutting-edge laboratory research with computational biology and global
+            collaboration to translate scientific discovery into measurable healthcare outcomes.
+            From early target identification to therapeutic validation, every project is guided by
+            rigor, ethics, and impact.
+          </p>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-3 sm:gap-6">
+          <article className="rounded-2xl border border-border/60 bg-surface/70 p-5 sm:p-6">
+            <h3 className="text-base font-bold text-foreground sm:text-lg">Scientific Rigor</h3>
+            <p className="mt-2 text-base text-muted-foreground">
+              Reproducible methods, peer-reviewed pipelines, and transparent data practices anchor
+              every study we conduct.
+            </p>
+          </article>
+          <article className="rounded-2xl border border-border/60 bg-surface/70 p-5 sm:p-6">
+            <h3 className="text-base font-bold text-foreground sm:text-lg">Global Collaboration</h3>
+            <p className="mt-2 text-base text-muted-foreground">
+              We partner with universities, hospitals, and biotech innovators worldwide to expand
+              what is possible in modern medicine.
+            </p>
+          </article>
+          <article className="rounded-2xl border border-border/60 bg-surface/70 p-5 sm:p-6">
+            <h3 className="text-base font-bold text-foreground sm:text-lg">Real-World Impact</h3>
+            <p className="mt-2 text-base text-muted-foreground">
+              Our research informs clinicians, shapes therapies, and delivers solutions that improve
+              patient outcomes across the globe.
+            </p>
+          </article>
+        </div>
+      </section>
+
       {/* Research impact banner — sits between Research Areas and footer CTA */}
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="relative">
