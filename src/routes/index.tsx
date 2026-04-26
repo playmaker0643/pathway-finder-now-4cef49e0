@@ -166,7 +166,7 @@ function HomePage() {
             <h2 className="mt-2 text-lg font-extrabold leading-tight text-foreground sm:mt-3 sm:text-3xl lg:text-4xl">
               Science. Innovation. <span className="text-foreground">Impact.</span>
             </h2>
-            <p className="mt-2 max-w-xl text-[10px] text-muted-foreground sm:mt-5 sm:text-base">
+            <p className="mt-2 max-w-xl text-[20px] text-muted-foreground sm:mt-5 sm:text-2xl">
               Ecomedic Squad is a research-driven organization focused on exploring the intersection
               of drugs and diseases. Our mission is to uncover new insights, validate therapeutic
               targets, and accelerate the development of safe and effective treatments.
