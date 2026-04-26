@@ -73,9 +73,8 @@ function HomePage() {
               <span className="h-1.5 w-1.5 rounded-full bg-neon-pink shadow-[0_0_8px_oklch(0.72_0.27_350)]" />
               Research for Better Tomorrow
             </span>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Expanding Scientific{" "}
-              <span className="text-gradient-brand">Frontiers.</span>
+            <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem]">
+              Expanding Scientific Frontiers.
               <br />
               Leading New Healthcare Solutions.
             </h1>
@@ -180,7 +179,7 @@ function HomePage() {
             Our Research Areas
           </p>
           <h2 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
-            Focused. Relevant. <span className="text-gradient-brand">Real-world Impact.</span>
+            Focused. Relevant. Real-world Impact.
           </h2>
         </div>
 
