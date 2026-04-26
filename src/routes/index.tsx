@@ -3,7 +3,6 @@ import { ArrowRight, Search, FlaskConical, HeartPulse, Users, Atom, Microscope, 
 import { PageShell } from "@/components/site/PageShell";
 import heroImage from "@/assets/hero-capsule.png";
 import labImage from "@/assets/lab-microscope.jpg";
-import collaborationImage from "@/assets/research-collaboration.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -96,7 +95,7 @@ function HomePage() {
               <br />
               Leading New Healthcare Solutions.
             </h1>
-            <p className="mt-3 max-w-xl text-[22px] text-muted-foreground sm:mt-6 sm:text-2xl lg:text-[2.25rem] lg:leading-snug">
+            <p className="mt-3 max-w-xl text-[11px] text-muted-foreground sm:mt-6 sm:text-base lg:text-lg">
               Ecomedic Squad is rapidly expanding its research scope into pioneering drug discovery
               and breakthrough disease understanding to establish impactful and innovative
               healthcare solutions worldwide.
@@ -166,7 +165,7 @@ function HomePage() {
             <h2 className="mt-2 text-lg font-extrabold leading-tight text-foreground sm:mt-3 sm:text-3xl lg:text-4xl">
               Science. Innovation. <span className="text-foreground">Impact.</span>
             </h2>
-            <p className="mt-2 max-w-xl text-[20px] text-muted-foreground sm:mt-5 sm:text-2xl">
+            <p className="mt-2 max-w-xl text-[10px] text-muted-foreground sm:mt-5 sm:text-base">
               Ecomedic Squad is a research-driven organization focused on exploring the intersection
               of drugs and diseases. Our mission is to uncover new insights, validate therapeutic
               targets, and accelerate the development of safe and effective treatments.
@@ -214,24 +213,9 @@ function HomePage() {
                 <Icon className="h-3.5 w-3.5 sm:h-6 sm:w-6" />
               </div>
               <h3 className="text-[10px] font-bold leading-tight text-foreground sm:text-base">{title}</h3>
-              <p className="mt-1 text-[18px] leading-snug text-muted-foreground sm:mt-2 sm:text-lg">{desc}</p>
+              <p className="mt-1 text-[9px] leading-snug text-muted-foreground sm:mt-2 sm:text-sm">{desc}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      {/* Collaboration banner image */}
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
-        <div className="relative">
-          <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-brand opacity-20 blur-3xl" />
-          <img
-            src={collaborationImage}
-            alt="Scientists collaborating in a futuristic neon-lit lab with glowing DNA structures"
-            width={1536}
-            height={768}
-            loading="lazy"
-            className="aspect-[2/1] w-full rounded-2xl border border-border/60 object-cover"
-          />
         </div>
       </section>
     </PageShell>

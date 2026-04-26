@@ -63,7 +63,7 @@ function AboutPage() {
               Meet the Minds and the Mission of{" "}
               <span className="text-gradient-brand">Ecomedic Squad</span>
             </h1>
-            <p className="mt-5 max-w-xl text-muted-foreground text-2xl sm:text-[2.25rem] sm:leading-snug">
+            <p className="mt-5 max-w-xl text-muted-foreground sm:text-lg">
               Ecomedic Squad is dedicated to advancing scientific research in drug discovery and
               disease understanding to create impactful healthcare solutions.
             </p>
@@ -71,7 +71,7 @@ function AboutPage() {
             <div className="mt-10 space-y-8">
               <div>
                 <h2 className="text-xl font-bold text-foreground">The Ecomedic Vision</h2>
-                <p className="mt-2 text-muted-foreground text-xl sm:text-2xl">
+                <p className="mt-2 text-muted-foreground">
                   A detailed view of our founding principles — the unique fusion of medical
                   expertise and data-driven computational models, working toward a long-term vision
                   of personalized medicine.
@@ -79,14 +79,14 @@ function AboutPage() {
               </div>
               <div>
                 <h2 className="text-xl font-bold text-foreground">Our Specialized Methodology</h2>
-                <p className="mt-2 text-muted-foreground text-xl sm:text-2xl">
+                <p className="mt-2 text-muted-foreground">
                   A deeper explanation of how the squad integrates molecular modeling, AI, and
                   clinical insights to find new therapeutic pathways and validate them rigorously.
                 </p>
               </div>
               <div>
                 <h2 className="text-xl font-bold text-foreground">Community &amp; Ethics</h2>
-                <p className="mt-2 text-muted-foreground text-xl sm:text-2xl">
+                <p className="mt-2 text-muted-foreground">
                   We are dedicated to ethical research, collaboration, and community outreach — making
                   science accessible and our work meaningful for better health outcomes everywhere.
                 </p>
