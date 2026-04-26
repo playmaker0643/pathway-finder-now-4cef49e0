@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Search, FlaskConical, HeartPulse, Users, Atom, Microscope, ClipboardList, ShieldCheck, BarChart3 } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import heroImage from "@/assets/hero-capsule.png";
+import labImage from "@/assets/lab-microscope.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -91,7 +92,7 @@ function HomePage() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-neon transition-transform hover:scale-[1.03]"
               >
-                Start
+                Explore Our Research
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
               <a
@@ -158,11 +159,16 @@ function HomePage() {
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border/60">
-            <div className="absolute inset-0 bg-gradient-to-br from-neon-purple/30 via-neon-pink/20 to-neon-cyan/20" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Microscope className="h-32 w-32 text-foreground/80 drop-shadow-[0_0_30px_oklch(0.85_0.16_200/0.6)]" />
-            </div>
+          <div className="relative">
+            <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-brand opacity-20 blur-3xl" />
+            <img
+              src={labImage}
+              alt="Microscope and laboratory glassware lit with neon pink and cyan light"
+              width={1024}
+              height={1024}
+              loading="lazy"
+              className="aspect-[4/3] w-full rounded-2xl border border-border/60 object-cover"
+            />
           </div>
         </div>
       </section>
