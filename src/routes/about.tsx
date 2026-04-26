@@ -60,8 +60,8 @@ const principles = [
 function AboutPage() {
   return (
     <PageShell>
-      <section className="mx-auto max-w-7xl px-4 pt-12 pb-12 sm:px-6 lg:px-8 lg:pt-20">
-        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-12">
+      <section className="mx-auto max-w-7xl px-4 pt-12 pb-12 sm:px-6 sm:pt-20 lg:px-8">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
               About Us
