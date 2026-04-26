@@ -214,9 +214,24 @@ function HomePage() {
                 <Icon className="h-3.5 w-3.5 sm:h-6 sm:w-6" />
               </div>
               <h3 className="text-[10px] font-bold leading-tight text-foreground sm:text-base">{title}</h3>
-              <p className="mt-1 text-[9px] leading-snug text-muted-foreground sm:mt-2 sm:text-sm">{desc}</p>
+              <p className="mt-1 text-[18px] leading-snug text-muted-foreground sm:mt-2 sm:text-lg">{desc}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* Collaboration banner image */}
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
+        <div className="relative">
+          <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-brand opacity-20 blur-3xl" />
+          <img
+            src={collaborationImage}
+            alt="Scientists collaborating in a futuristic neon-lit lab with glowing DNA structures"
+            width={1536}
+            height={768}
+            loading="lazy"
+            className="aspect-[2/1] w-full rounded-2xl border border-border/60 object-cover"
+          />
         </div>
       </section>
     </PageShell>
