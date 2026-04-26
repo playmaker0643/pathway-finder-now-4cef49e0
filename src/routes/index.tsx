@@ -96,7 +96,7 @@ function HomePage() {
               <br />
               Leading New Healthcare Solutions.
             </h1>
-            <p className="mt-3 max-w-xl text-[11px] text-muted-foreground sm:mt-6 sm:text-base lg:text-lg">
+            <p className="mt-3 max-w-xl text-[22px] text-muted-foreground sm:mt-6 sm:text-2xl lg:text-[2.25rem] lg:leading-snug">
               Ecomedic Squad is rapidly expanding its research scope into pioneering drug discovery
               and breakthrough disease understanding to establish impactful and innovative
               healthcare solutions worldwide.
