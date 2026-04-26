@@ -90,18 +90,32 @@ function HomePage() {
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-neon-pink/40 bg-surface/60 px-2 py-1 text-[9px] font-medium text-foreground sm:gap-2 sm:px-4 sm:py-1.5 sm:text-xs">
               <span className="h-1 w-1 rounded-full bg-neon-pink shadow-[0_0_8px_oklch(0.72_0.27_350)] sm:h-1.5 sm:w-1.5" />
-              Research for Better Tomorrow
+              Where science meets compassion
             </span>
             <h1 className="mt-3 text-xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:mt-5 sm:text-3xl md:text-4xl lg:text-[3.25rem]">
-              Expanding Scientific Frontiers.
-              <br />
-              Leading New Healthcare Solutions.
+              Welcome to <span className="text-gradient-brand">Ecomedic Squad</span>
             </h1>
-            <p className="mt-3 max-w-xl text-sm text-muted-foreground sm:mt-6 sm:text-base lg:text-lg">
-              Ecomedic Squad is rapidly expanding its research scope into pioneering drug discovery
-              and breakthrough disease understanding to establish impactful and innovative
-              healthcare solutions worldwide.
+            <p className="mt-3 max-w-xl text-base font-semibold text-foreground sm:mt-4 sm:text-lg lg:text-xl">
+              Where science meets compassion, and curiosity drives discovery.
             </p>
+            <div className="mt-3 max-w-xl space-y-3 text-base text-muted-foreground sm:mt-5 sm:text-lg">
+              <p>
+                It is with purpose and pride that we welcome you to the Ecomedic Squad — a team
+                driven not only by knowledge, but by a deep commitment to the health and well-being
+                of communities.
+              </p>
+              <p>
+                We are more than learners. We are health detectives, scientific explorers, and
+                guardians of care. Our mission is clear: to study diseases, uncover their causes,
+                track their patterns, and discover the most effective paths to treatment and
+                prevention.
+              </p>
+              <p>
+                In a world facing constant health challenges — from global pandemics to chronic
+                conditions — our work goes beyond academics. It is about impact, innovation, and
+                saving lives.
+              </p>
+            </div>
 
             <div className="mt-4 flex flex-wrap items-center gap-2 sm:mt-8 sm:gap-4">
               <a
