@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { BookOpen, FileText, BarChart3, Globe2, Target, Sparkles } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import labImage from "@/assets/lab-microscope.jpg";
+import publicationsHero from "@/assets/publications-hero.jpg";
 
 export const Route = createFileRoute("/publications")({
   head: () => ({
@@ -68,19 +69,32 @@ function PublicationsPage() {
   return (
     <PageShell>
       <section className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:px-6 sm:pt-20 lg:px-8">
-        <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
-            Publications
-          </p>
-          <h1 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-5xl">
-            Publications — <span className="text-gradient-brand">Ecomedic Squad</span>
-          </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-base text-muted-foreground sm:text-lg">
-            At Ecomedic Squad, our work goes beyond research — we share knowledge that informs,
-            inspires, and drives change. Our publications reflect our commitment to advancing
-            health awareness, improving disease understanding, and contributing meaningful insights
-            to the scientific and global health community.
-          </p>
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
+              Publications
+            </p>
+            <h1 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-5xl">
+              Publications — <span className="text-gradient-brand">Ecomedic Squad</span>
+            </h1>
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+              At Ecomedic Squad, our work goes beyond research — we share knowledge that informs,
+              inspires, and drives change. Our publications reflect our commitment to advancing
+              health awareness, improving disease understanding, and contributing meaningful insights
+              to the scientific and global health community.
+            </p>
+          </div>
+          <div className="relative">
+            <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-brand opacity-20 blur-3xl" />
+            <img
+              src={publicationsHero}
+              alt="Stack of medical research papers and tablet showing data charts"
+              width={1024}
+              height={1024}
+              className="w-full rounded-2xl border border-border/60"
+              loading="eager"
+            />
+          </div>
         </div>
       </section>
 

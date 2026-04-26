@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Dna, Search, BarChart3, Lightbulb, ShieldCheck, Users2, Sparkles, HeartHandshake, Globe2 } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import labImage from "@/assets/lab-microscope.jpg";
+import researchHero from "@/assets/research-hero.jpg";
 
 export const Route = createFileRoute("/research")({
   head: () => ({
@@ -68,22 +69,35 @@ function ResearchPage() {
   return (
     <PageShell>
       <section className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:px-6 sm:pt-20 lg:px-8">
-        <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
-            Research
-          </p>
-          <h1 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-5xl">
-            Research — <span className="text-gradient-brand">Ecomedic Squad</span>
-          </h1>
-          <div className="mx-auto mt-4 max-w-3xl space-y-3 text-base text-muted-foreground sm:text-lg">
-            <p>
-              At Ecomedic Squad, research is the foundation of everything we do. It is where
-              curiosity meets science, and where questions become solutions that can transform lives.
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
+              Research
             </p>
-            <p>
-              We are dedicated to exploring diseases in depth — not just to understand them, but to
-              challenge them, track them, and ultimately overcome them.
-            </p>
+            <h1 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-5xl">
+              Research — <span className="text-gradient-brand">Ecomedic Squad</span>
+            </h1>
+            <div className="mt-4 space-y-3 text-base text-muted-foreground sm:text-lg">
+              <p>
+                At Ecomedic Squad, research is the foundation of everything we do. It is where
+                curiosity meets science, and where questions become solutions that can transform lives.
+              </p>
+              <p>
+                We are dedicated to exploring diseases in depth — not just to understand them, but to
+                challenge them, track them, and ultimately overcome them.
+              </p>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-brand opacity-20 blur-3xl" />
+            <img
+              src={researchHero}
+              alt="Scientific research lab with DNA helix and microscope"
+              width={1024}
+              height={1024}
+              className="w-full rounded-2xl border border-border/60"
+              loading="eager"
+            />
           </div>
         </div>
       </section>

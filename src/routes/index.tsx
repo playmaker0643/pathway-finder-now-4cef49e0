@@ -119,7 +119,7 @@ function HomePage() {
 
             <div className="mt-4 flex flex-wrap items-center gap-2 sm:mt-8 sm:gap-4">
               <a
-                href="https://ecomedicblogs.codebreakers.uk"
+                href="https://blog.ecomed.codebreakers.uk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-brand px-3 py-1.5 text-[11px] font-semibold text-primary-foreground shadow-neon transition-transform hover:scale-[1.03] sm:gap-2 sm:px-7 sm:py-3.5 sm:text-base"

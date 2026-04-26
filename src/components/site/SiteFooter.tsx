@@ -23,7 +23,7 @@ export function SiteFooter() {
           </div>
           <div className="flex items-center gap-4">
             <a
-              href="https://ecomedicblogs.codebreakers.uk"
+              href="https://blog.ecomed.codebreakers.uk"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-semibold text-primary-foreground shadow-neon transition-transform hover:scale-[1.02]"

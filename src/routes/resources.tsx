@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { BookOpen, Stethoscope, BarChart3, Pill, Globe2, Target } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import labImage from "@/assets/lab-microscope.jpg";
+import resourcesHero from "@/assets/resources-hero.jpg";
 
 export const Route = createFileRoute("/resources")({
   head: () => ({
@@ -68,23 +69,36 @@ function ResourcesPage() {
   return (
     <PageShell>
       <section className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:px-6 sm:pt-20 lg:px-8">
-        <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
-            Resources
-          </p>
-          <h1 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-5xl">
-            Resources — <span className="text-gradient-brand">Ecomedic Squad</span>
-          </h1>
-          <div className="mx-auto mt-4 max-w-3xl space-y-3 text-base text-muted-foreground sm:text-lg">
-            <p>
-              At Ecomedic Squad, we believe that access to the right information is key to
-              understanding, preventing, and managing diseases. Our resources are carefully curated
-              to support learning, research, and informed decision-making.
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
+              Resources
             </p>
-            <p>
-              Whether you are a student, researcher, or simply curious about health, this section
-              provides valuable tools to guide your journey.
-            </p>
+            <h1 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-5xl">
+              Resources — <span className="text-gradient-brand">Ecomedic Squad</span>
+            </h1>
+            <div className="mt-4 space-y-3 text-base text-muted-foreground sm:text-lg">
+              <p>
+                At Ecomedic Squad, we believe that access to the right information is key to
+                understanding, preventing, and managing diseases. Our resources are carefully curated
+                to support learning, research, and informed decision-making.
+              </p>
+              <p>
+                Whether you are a student, researcher, or simply curious about health, this section
+                provides valuable tools to guide your journey.
+              </p>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-brand opacity-20 blur-3xl" />
+            <img
+              src={resourcesHero}
+              alt="Open medical book with floating health and medical resource icons"
+              width={1024}
+              height={1024}
+              className="w-full rounded-2xl border border-border/60"
+              loading="eager"
+            />
           </div>
         </div>
       </section>
