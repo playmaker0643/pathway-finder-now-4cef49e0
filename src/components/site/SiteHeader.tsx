@@ -19,7 +19,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   const linkClass =
-    "text-sm font-medium text-muted-foreground transition-colors hover:text-foreground data-[status=active]:text-foreground data-[status=active]:[&>span]:opacity-100";
+    "group relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground data-[status=active]:text-foreground";
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/70 backdrop-blur-xl">
@@ -36,12 +36,12 @@ export function SiteHeader() {
                 className={linkClass}
               >
                 {item.label}
-                <span className="mx-auto mt-1 block h-0.5 w-6 bg-gradient-brand opacity-0 transition-opacity" />
+                <span className="mx-auto mt-1 block h-0.5 w-6 bg-neon-cyan opacity-0 shadow-[0_0_8px_oklch(0.85_0.16_200/0.8)] transition-opacity group-data-[status=active]:opacity-100" />
               </Link>
             ) : (
               <a key={item.label} href={item.href} className={linkClass}>
                 {item.label}
-                <span className="mx-auto mt-1 block h-0.5 w-6 bg-gradient-brand opacity-0 transition-opacity" />
+                <span className="mx-auto mt-1 block h-0.5 w-6 bg-neon-cyan opacity-0 shadow-[0_0_8px_oklch(0.85_0.16_200/0.8)] transition-opacity" />
               </a>
             ),
           )}
