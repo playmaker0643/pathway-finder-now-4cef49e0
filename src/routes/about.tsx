@@ -71,7 +71,7 @@ function AboutPage() {
             <div className="mt-10 space-y-8">
               <div>
                 <h2 className="text-xl font-bold text-foreground">The Ecomedic Vision</h2>
-                <p className="mt-2 text-muted-foreground">
+                <p className="mt-2 text-muted-foreground text-xl sm:text-2xl">
                   A detailed view of our founding principles — the unique fusion of medical
                   expertise and data-driven computational models, working toward a long-term vision
                   of personalized medicine.
