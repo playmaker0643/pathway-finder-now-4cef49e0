@@ -235,6 +235,21 @@ function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Research impact banner — sits between Research Areas and footer CTA */}
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="relative">
+          <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-brand opacity-20 blur-3xl" />
+          <img
+            src={researchImpactImage}
+            alt="Scientists in a neon-lit research lab analyzing molecular structures and data visualizations"
+            width={1536}
+            height={768}
+            loading="lazy"
+            className="aspect-[2/1] w-full rounded-2xl border border-border/60 object-cover"
+          />
+        </div>
+      </section>
     </PageShell>
   );
 }
