@@ -63,7 +63,7 @@ function AboutPage() {
               Meet the Minds and the Mission of{" "}
               <span className="text-gradient-brand">Ecomedic Squad</span>
             </h1>
-            <p className="mt-5 max-w-xl text-muted-foreground sm:text-lg">
+            <p className="mt-5 max-w-xl text-muted-foreground text-2xl sm:text-[2.25rem] sm:leading-snug">
               Ecomedic Squad is dedicated to advancing scientific research in drug discovery and
               disease understanding to create impactful healthcare solutions.
             </p>
