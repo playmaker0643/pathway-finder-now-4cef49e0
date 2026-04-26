@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { BookOpen, Database, GraduationCap, Newspaper } from "lucide-react";
+import { BookOpen, Stethoscope, BarChart3, Pill, Globe2, Target } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import labImage from "@/assets/lab-microscope.jpg";
 
@@ -10,13 +10,13 @@ export const Route = createFileRoute("/resources")({
       {
         name: "description",
         content:
-          "Guides, datasets, educational material, and news from Ecomedic Squad to support researchers, clinicians, and curious minds.",
+          "Curated research materials, diagnostic guides, data and reports, treatment information, and community health insights from Ecomedic Squad.",
       },
       { property: "og:title", content: "Resources — Ecomedic Squad" },
       {
         property: "og:description",
         content:
-          "Educational guides, open datasets, and news supporting researchers and clinicians.",
+          "Reliable, easy-to-understand health information to support learning, research, and informed decisions.",
       },
       { property: "og:image", content: labImage },
       { name: "twitter:image", content: labImage },
@@ -29,31 +29,38 @@ export const Route = createFileRoute("/resources")({
 const resources = [
   {
     icon: BookOpen,
-    title: "Research Guides",
-    desc: "In-depth guides covering drug discovery workflows, target validation, and translational research best practices.",
+    title: "Research Materials",
+    desc: "Explore articles, case studies, and scientific insights that deepen your understanding of diseases, their causes, and their impact.",
     color: "text-neon-pink",
     border: "border-neon-pink/40",
   },
   {
-    icon: Database,
-    title: "Open Datasets",
-    desc: "Curated datasets and analysis pipelines from our bioinformatics group, available for academic use.",
+    icon: Stethoscope,
+    title: "Diagnostic Guides",
+    desc: "Learn about methods and tools used in identifying diseases early — because timely detection can save lives.",
     color: "text-neon-cyan",
     border: "border-neon-cyan/40",
   },
   {
-    icon: GraduationCap,
-    title: "Educational Material",
-    desc: "Lectures, primers, and explainers designed for students, early-career researchers, and clinicians.",
+    icon: BarChart3,
+    title: "Data & Reports",
+    desc: "Access health data, trends, and pattern analysis that reveal how diseases spread and evolve across populations.",
     color: "text-neon-purple",
     border: "border-neon-purple/40",
   },
   {
-    icon: Newspaper,
-    title: "News & Blog",
-    desc: "Stay current with research updates, partnership announcements, and scientific commentary from our team.",
+    icon: Pill,
+    title: "Treatment & Care Information",
+    desc: "Discover approaches to treatment, management, and prevention — combining medical knowledge with practical care strategies.",
     color: "text-[oklch(0.8_0.18_70)]",
     border: "border-[oklch(0.8_0.18_70)]/40",
+  },
+  {
+    icon: Globe2,
+    title: "Community Health Insights",
+    desc: "Understand real-world health challenges and how they affect different communities, helping you connect science with impact.",
+    color: "text-[oklch(0.7_0.2_145)]",
+    border: "border-[oklch(0.7_0.2_145)]/40",
   },
 ];
 
@@ -66,17 +73,27 @@ function ResourcesPage() {
             Resources
           </p>
           <h1 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-5xl">
-            Knowledge to Power Discovery
+            Resources — <span className="text-gradient-brand">Ecomedic Squad</span>
           </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-base text-muted-foreground sm:text-lg">
-            Explore guides, datasets, and educational material curated by Ecomedic Squad scientists
-            to support the next generation of researchers and clinicians.
-          </p>
+          <div className="mx-auto mt-4 max-w-3xl space-y-3 text-base text-muted-foreground sm:text-lg">
+            <p>
+              At Ecomedic Squad, we believe that access to the right information is key to
+              understanding, preventing, and managing diseases. Our resources are carefully curated
+              to support learning, research, and informed decision-making.
+            </p>
+            <p>
+              Whether you are a student, researcher, or simply curious about health, this section
+              provides valuable tools to guide your journey.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+        <h2 className="text-center text-2xl font-extrabold text-foreground sm:text-3xl">
+          What You'll Find
+        </h2>
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-6">
           {resources.map(({ icon: Icon, title, desc, color, border }) => (
             <article
               key={title}
@@ -85,19 +102,27 @@ function ResourcesPage() {
               <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl border ${border} ${color}`}>
                 <Icon className="h-6 w-6" />
               </div>
-              <h2 className="text-lg font-bold text-foreground">{title}</h2>
+              <h3 className="text-lg font-bold text-foreground">{title}</h3>
               <p className="mt-2 text-base text-muted-foreground">{desc}</p>
-              <a
-                href="https://ecomedicblogs.codebreakers.uk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-neon-cyan hover:underline"
-              >
-                Visit resource →
-              </a>
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <article className="rounded-2xl border border-border/60 bg-surface/70 p-6 sm:p-8">
+          <div className="flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-neon-cyan/40 text-neon-cyan">
+              <Target className="h-6 w-6" />
+            </div>
+            <h2 className="text-2xl font-extrabold text-foreground sm:text-3xl">Our Goal</h2>
+          </div>
+          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+            We aim to empower individuals with reliable, easy-to-understand, and meaningful health
+            information. Knowledge is not just power — it is a tool for saving lives and building
+            healthier communities.
+          </p>
+        </article>
       </section>
     </PageShell>
   );
