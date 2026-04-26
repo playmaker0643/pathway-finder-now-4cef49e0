@@ -66,40 +66,40 @@ function HomePage() {
   return (
     <PageShell>
       {/* Hero */}
-      <section className="mx-auto max-w-7xl px-4 pt-12 pb-20 sm:px-6 lg:px-8 lg:pt-20">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+      <section className="mx-auto max-w-7xl px-4 pt-8 pb-16 sm:px-6 lg:px-8 lg:pt-20 lg:pb-20">
+        <div className="grid grid-cols-2 items-center gap-4 sm:gap-8 lg:gap-12">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-neon-pink/40 bg-surface/60 px-4 py-1.5 text-xs font-medium text-foreground">
-              <span className="h-1.5 w-1.5 rounded-full bg-neon-pink shadow-[0_0_8px_oklch(0.72_0.27_350)]" />
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-neon-pink/40 bg-surface/60 px-2 py-1 text-[9px] font-medium text-foreground sm:gap-2 sm:px-4 sm:py-1.5 sm:text-xs">
+              <span className="h-1 w-1 rounded-full bg-neon-pink shadow-[0_0_8px_oklch(0.72_0.27_350)] sm:h-1.5 sm:w-1.5" />
               Research for Better Tomorrow
             </span>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem]">
+            <h1 className="mt-3 text-xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:mt-5 sm:text-3xl md:text-4xl lg:text-[3.25rem]">
               Expanding Scientific Frontiers.
               <br />
               Leading New Healthcare Solutions.
             </h1>
-            <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
+            <p className="mt-3 max-w-xl text-[11px] text-muted-foreground sm:mt-6 sm:text-base lg:text-lg">
               Ecomedic Squad is rapidly expanding its research scope into pioneering drug discovery
               and breakthrough disease understanding to establish impactful and innovative
               healthcare solutions worldwide.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-4 flex flex-wrap items-center gap-2 sm:mt-8 sm:gap-4">
               <a
                 href="https://ecomedicblogs.codebreakers.uk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-neon transition-transform hover:scale-[1.03]"
+                className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-brand px-3 py-1.5 text-[11px] font-semibold text-primary-foreground shadow-neon transition-transform hover:scale-[1.03] sm:gap-2 sm:px-7 sm:py-3.5 sm:text-base"
               >
                 Explore Our Research
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1 sm:h-5 sm:w-5" />
               </a>
               <a
                 href="#research"
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-medium text-foreground transition-colors hover:text-neon-cyan"
+                className="inline-flex items-center gap-1 rounded-full px-2 py-1 text-[11px] font-medium text-foreground transition-colors hover:text-neon-cyan sm:gap-1.5 sm:px-3 sm:py-2 sm:text-sm"
               >
                 Learn More
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
               </a>
             </div>
           </div>
@@ -136,26 +136,26 @@ function HomePage() {
       </section>
 
       {/* Mini About */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
+        <div className="grid grid-cols-2 items-center gap-4 sm:gap-8 lg:gap-12">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
+            <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-eyebrow sm:text-xs">
               About Us
             </p>
-            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
-              Science. Innovation. <span className="text-gradient-brand">Impact.</span>
+            <h2 className="mt-2 text-lg font-extrabold leading-tight text-foreground sm:mt-3 sm:text-3xl lg:text-4xl">
+              Science. Innovation. <span className="text-foreground">Impact.</span>
             </h2>
-            <p className="mt-5 max-w-xl text-muted-foreground">
+            <p className="mt-2 max-w-xl text-[10px] text-muted-foreground sm:mt-5 sm:text-base">
               Ecomedic Squad is a research-driven organization focused on exploring the intersection
               of drugs and diseases. Our mission is to uncover new insights, validate therapeutic
               targets, and accelerate the development of safe and effective treatments.
             </p>
             <a
               href="/about"
-              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-neon-cyan hover:underline"
+              className="mt-3 inline-flex items-center gap-1 text-[10px] font-semibold text-neon-cyan hover:underline sm:mt-6 sm:gap-1.5 sm:text-sm"
             >
               Know More About Us
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
             </a>
           </div>
           <div className="relative">
