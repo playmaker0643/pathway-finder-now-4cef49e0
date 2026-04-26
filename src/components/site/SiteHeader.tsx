@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
+import { ThemeToggle } from "./ThemeToggle";
 
 type NavItem =
   | { kind: "route"; to: "/" | "/about" | "/research" | "/publications" | "/resources"; label: string; exact?: boolean }
