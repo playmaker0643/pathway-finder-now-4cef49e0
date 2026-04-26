@@ -39,27 +39,44 @@ const researchAreas = [
     icon: Atom,
     title: "Drug Discovery",
     desc: "Identifying and validating novel drug candidates through advanced methodologies.",
+    color: "text-neon-pink",
+    border: "border-neon-pink/40",
   },
   {
     icon: Microscope,
     title: "Disease Mechanisms",
     desc: "Understanding the molecular and cellular mechanisms of complex diseases.",
+    color: "text-neon-cyan",
+    border: "border-neon-cyan/40",
   },
   {
     icon: ClipboardList,
     title: "Preclinical Studies",
     desc: "Conducting in vitro and in vivo studies to assess safety and efficacy.",
+    color: "text-neon-purple",
+    border: "border-neon-purple/40",
   },
   {
     icon: ShieldCheck,
     title: "Therapeutic Validation",
     desc: "Validating therapeutic targets and biomarkers for better outcomes.",
+    color: "text-[oklch(0.8_0.18_70)]",
+    border: "border-[oklch(0.8_0.18_70)]/40",
   },
   {
     icon: BarChart3,
     title: "Data & Bioinformatics",
     desc: "Leveraging data science and bioinformatics for research insights.",
+    color: "text-[oklch(0.7_0.2_145)]",
+    border: "border-[oklch(0.7_0.2_145)]/40",
   },
+];
+
+const statColors = [
+  { color: "text-neon-pink", border: "border-neon-pink/50" },
+  { color: "text-neon-cyan", border: "border-neon-cyan/50" },
+  { color: "text-neon-purple", border: "border-neon-purple/50" },
+  { color: "text-[oklch(0.8_0.18_70)]", border: "border-[oklch(0.8_0.18_70)]/50" },
 ];
 
 function HomePage() {
