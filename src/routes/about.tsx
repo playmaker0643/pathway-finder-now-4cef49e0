@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Lightbulb, Users2, ShieldCheck, Rocket } from "lucide-react";
+import { Search, FlaskConical, HeartHandshake, Leaf } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import teamImage from "@/assets/about-team.png";
 
@@ -10,13 +10,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Meet the minds and mission of Ecomedic Squad — advancing drug discovery, disease understanding, and ethical research for global healthcare impact.",
+          "Ecomedic Squad is a collective of passionate minds united by one purpose: improving health through knowledge, research, and compassionate action.",
       },
       { property: "og:title", content: "About Us — Ecomedic Squad" },
       {
         property: "og:description",
         content:
-          "Our vision, methodology, and commitment to ethical research and community impact.",
+          "Curiosity, science, and compassion — the principles guiding our work to study, identify, and treat diseases.",
       },
       { property: "og:image", content: teamImage },
       { name: "twitter:image", content: teamImage },
@@ -26,71 +26,66 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-const values = [
+const principles = [
   {
-    icon: Lightbulb,
-    title: "Innovation",
-    desc: "Identifying bold scientific ideas and turning them into actionable discoveries.",
+    icon: Search,
+    title: "Curiosity",
+    desc: "Curiosity drives us to ask deeper questions about diseases and the world they shape.",
+    color: "text-neon-pink",
+    border: "border-neon-pink/40",
   },
   {
-    icon: Users2,
-    title: "Collaboration",
-    desc: "Working with researchers and partners to accelerate breakthrough therapies.",
+    icon: FlaskConical,
+    title: "Science",
+    desc: "Science guides our discoveries, grounding every insight in evidence and rigor.",
+    color: "text-neon-cyan",
+    border: "border-neon-cyan/40",
   },
   {
-    icon: ShieldCheck,
-    title: "Integrity",
-    desc: "Conducting therapeutic research with transparency, safety, and efficacy.",
+    icon: HeartHandshake,
+    title: "Compassion",
+    desc: "Compassion ensures our work always serves people, communities, and humanity at large.",
+    color: "text-neon-purple",
+    border: "border-neon-purple/40",
   },
   {
-    icon: Rocket,
-    title: "Impact",
-    desc: "Leveraging data, science, and translational insights for real-world outcomes.",
+    icon: Leaf,
+    title: "Hope",
+    desc: "We stand as a symbol of dedication, innovation, and hope for a healthier future.",
+    color: "text-[oklch(0.8_0.18_70)]",
+    border: "border-[oklch(0.8_0.18_70)]/40",
   },
 ];
 
 function AboutPage() {
   return (
     <PageShell>
-      {/* Header */}
-      <section className="mx-auto max-w-7xl px-4 pt-12 pb-16 sm:px-6 lg:px-8 lg:pt-20">
-        <div className="grid items-start gap-12 lg:grid-cols-2">
+      <section className="mx-auto max-w-7xl px-4 pt-12 pb-12 sm:px-6 lg:px-8 lg:pt-20">
+        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-12">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
               About Us
             </p>
-            <h1 className="mt-3 text-4xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl">
-              Meet the Minds and the Mission of{" "}
-              <span className="text-gradient-brand">Ecomedic Squad</span>
+            <h1 className="mt-3 text-3xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-5xl">
+              About Us — <span className="text-gradient-brand">Ecomedic Squad</span>
             </h1>
-            <p className="mt-5 max-w-xl text-muted-foreground sm:text-lg">
-              Ecomedic Squad is dedicated to advancing scientific research in drug discovery and
-              disease understanding to create impactful healthcare solutions.
-            </p>
-
-            <div className="mt-10 space-y-8">
-              <div>
-                <h2 className="text-xl font-bold text-foreground">The Ecomedic Vision</h2>
-                <p className="mt-2 text-muted-foreground">
-                  A detailed view of our founding principles — the unique fusion of medical
-                  expertise and data-driven computational models, working toward a long-term vision
-                  of personalized medicine.
-                </p>
-              </div>
-              <div>
-                <h2 className="text-xl font-bold text-foreground">Our Specialized Methodology</h2>
-                <p className="mt-2 text-muted-foreground">
-                  A deeper explanation of how the squad integrates molecular modeling, AI, and
-                  clinical insights to find new therapeutic pathways and validate them rigorously.
-                </p>
-              </div>
-              <div>
-                <h2 className="text-xl font-bold text-foreground">Community &amp; Ethics</h2>
-                <p className="mt-2 text-muted-foreground">
-                  We are dedicated to ethical research, collaboration, and community outreach — making
-                  science accessible and our work meaningful for better health outcomes everywhere.
-                </p>
-              </div>
+            <div className="mt-5 max-w-xl space-y-4 text-base text-muted-foreground sm:text-lg">
+              <p>
+                At Ecomedic Squad, we are a collective of passionate minds united by one purpose:
+                improving health through knowledge, research, and compassionate action.
+              </p>
+              <p>
+                We believe that understanding diseases is the first step toward defeating them.
+                That's why our team is dedicated to studying the science behind illnesses,
+                identifying their causes, and uncovering patterns that shape how they affect
+                individuals and communities.
+              </p>
+              <p className="font-semibold text-foreground">But we don't stop at observation.</p>
+              <p>
+                We actively work toward early detection, accurate identification, and effective
+                treatment strategies. By combining scientific research with real-world insight, we
+                aim to bridge the gap between knowledge and care.
+              </p>
             </div>
           </div>
 
@@ -106,31 +101,39 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Core values */}
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
-            Our Core Values
-          </p>
-          <h2 className="mt-3 text-3xl font-extrabold text-foreground sm:text-4xl">
-            What <span className="text-gradient-brand">Drives Us</span>
+          <h2 className="text-2xl font-extrabold text-foreground sm:text-3xl">
+            Our approach is simple but powerful
           </h2>
         </div>
-
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {values.map(({ icon: Icon, title, desc }) => (
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-6">
+          {principles.map(({ icon: Icon, title, desc, color, border }) => (
             <article
               key={title}
-              className="rounded-2xl border border-border/60 bg-surface/70 p-6 text-center transition-all hover:border-neon-purple/50 hover:shadow-neon"
+              className="rounded-2xl border border-border/60 bg-surface/70 p-6 transition-all hover:border-neon-purple/50 hover:shadow-neon"
             >
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-neon-pink/40 text-neon-pink">
+              <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl border ${border} ${color}`}>
                 <Icon className="h-6 w-6" />
               </div>
-              <h3 className="text-base font-bold text-foreground">{title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+              <h3 className="text-lg font-bold text-foreground">{title}</h3>
+              <p className="mt-2 text-base text-muted-foreground">{desc}</p>
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <article className="rounded-2xl border border-border/60 bg-surface/70 p-6 sm:p-8">
+          <p className="text-base text-muted-foreground sm:text-lg">
+            In a rapidly changing world filled with health challenges, Ecomedic Squad stands as a
+            symbol of dedication, innovation, and hope. We are committed to making a difference —
+            not just in laboratories or classrooms, but in the lives of people everywhere.
+          </p>
+          <blockquote className="mt-6 border-l-4 border-neon-pink pl-4 text-lg italic text-foreground sm:text-xl">
+            "We don't just study diseases — we work to change their story."
+          </blockquote>
+        </article>
       </section>
     </PageShell>
   );

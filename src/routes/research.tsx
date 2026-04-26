@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Atom, Microscope, ClipboardList, ShieldCheck, BarChart3 } from "lucide-react";
+import { Dna, Search, BarChart3, Lightbulb, ShieldCheck, Users2, Sparkles, HeartHandshake, Globe2 } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import labImage from "@/assets/lab-microscope.jpg";
 
@@ -10,13 +10,13 @@ export const Route = createFileRoute("/research")({
       {
         name: "description",
         content:
-          "Explore Ecomedic Squad's research programs in drug discovery, disease mechanisms, preclinical studies, therapeutic validation, and bioinformatics.",
+          "At Ecomedic Squad, research is the foundation of everything we do — exploring diseases in depth to challenge, track, and overcome them.",
       },
       { property: "og:title", content: "Research — Ecomedic Squad" },
       {
         property: "og:description",
         content:
-          "Our research programs span drug discovery, disease mechanisms, preclinical studies, and bioinformatics.",
+          "Disease study, cause identification, pattern observation, and innovation in care and treatment.",
       },
       { property: "og:image", content: labImage },
       { name: "twitter:image", content: labImage },
@@ -26,42 +26,42 @@ export const Route = createFileRoute("/research")({
   component: ResearchPage,
 });
 
-const programs = [
+const focusAreas = [
   {
-    icon: Atom,
-    title: "Drug Discovery",
-    desc: "Identifying and validating novel small-molecule and biologic drug candidates through advanced screening, structure-based design, and target validation.",
+    icon: Dna,
+    title: "Disease Study & Analysis",
+    desc: "We investigate the biological nature of diseases, examining how they develop, function, and impact the human body.",
     color: "text-neon-pink",
     border: "border-neon-pink/40",
   },
   {
-    icon: Microscope,
-    title: "Disease Mechanisms",
-    desc: "Investigating molecular and cellular pathways underlying complex diseases to uncover actionable therapeutic targets.",
+    icon: Search,
+    title: "Cause Identification",
+    desc: "Understanding why diseases occur is key to prevention. We explore environmental, genetic, and lifestyle factors that contribute to illness.",
     color: "text-neon-cyan",
     border: "border-neon-cyan/40",
   },
   {
-    icon: ClipboardList,
-    title: "Preclinical Studies",
-    desc: "Designing and executing in vitro and in vivo studies that rigorously evaluate efficacy, safety, and pharmacokinetics.",
+    icon: BarChart3,
+    title: "Pattern Observation",
+    desc: "By studying how diseases spread and evolve, we uncover trends that help predict outbreaks and improve response strategies.",
     color: "text-neon-purple",
     border: "border-neon-purple/40",
   },
   {
-    icon: ShieldCheck,
-    title: "Therapeutic Validation",
-    desc: "Validating therapeutic targets and biomarkers across diverse models to de-risk translation into clinical research.",
+    icon: Lightbulb,
+    title: "Innovation in Care & Treatment",
+    desc: "Our research aims to discover better methods of treatment, management, and prevention — combining science with practical care solutions.",
     color: "text-[oklch(0.8_0.18_70)]",
     border: "border-[oklch(0.8_0.18_70)]/40",
   },
-  {
-    icon: BarChart3,
-    title: "Data & Bioinformatics",
-    desc: "Applying computational biology, machine learning, and large-scale omics analysis to accelerate discovery and insight.",
-    color: "text-[oklch(0.7_0.2_145)]",
-    border: "border-[oklch(0.7_0.2_145)]/40",
-  },
+];
+
+const approach = [
+  { icon: ShieldCheck, title: "Scientific Integrity", desc: "Accurate, evidence-based research.", color: "text-neon-cyan", border: "border-neon-cyan/40" },
+  { icon: Users2, title: "Collaboration", desc: "Learning and working together for stronger outcomes.", color: "text-neon-pink", border: "border-neon-pink/40" },
+  { icon: Sparkles, title: "Innovation", desc: "Constantly seeking better ways to solve health challenges.", color: "text-neon-purple", border: "border-neon-purple/40" },
+  { icon: HeartHandshake, title: "Compassion", desc: "Ensuring our research always serves humanity.", color: "text-[oklch(0.8_0.18_70)]", border: "border-[oklch(0.8_0.18_70)]/40" },
 ];
 
 function ResearchPage() {
@@ -70,22 +70,30 @@ function ResearchPage() {
       <section className="mx-auto max-w-7xl px-4 pt-12 pb-8 sm:px-6 sm:pt-20 lg:px-8">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
-            Our Research
+            Research
           </p>
           <h1 className="mt-3 text-3xl font-extrabold leading-tight text-foreground sm:text-5xl">
-            Programs Advancing Modern Medicine
+            Research — <span className="text-gradient-brand">Ecomedic Squad</span>
           </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-base text-muted-foreground sm:text-lg">
-            Ecomedic Squad runs interdisciplinary research programs that move scientific ideas from
-            hypothesis to therapeutic relevance. Each program is led by experienced scientists and
-            supported by collaborators across academia, clinics, and industry.
-          </p>
+          <div className="mx-auto mt-4 max-w-3xl space-y-3 text-base text-muted-foreground sm:text-lg">
+            <p>
+              At Ecomedic Squad, research is the foundation of everything we do. It is where
+              curiosity meets science, and where questions become solutions that can transform lives.
+            </p>
+            <p>
+              We are dedicated to exploring diseases in depth — not just to understand them, but to
+              challenge them, track them, and ultimately overcome them.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-          {programs.map(({ icon: Icon, title, desc, color, border }) => (
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+        <h2 className="text-center text-2xl font-extrabold text-foreground sm:text-3xl">
+          Our Research Focus
+        </h2>
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-6">
+          {focusAreas.map(({ icon: Icon, title, desc, color, border }) => (
             <article
               key={title}
               className="rounded-2xl border border-border/60 bg-surface/70 p-6 transition-all hover:border-neon-pink/50 hover:shadow-neon"
@@ -93,11 +101,52 @@ function ResearchPage() {
               <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl border ${border} ${color}`}>
                 <Icon className="h-6 w-6" />
               </div>
-              <h2 className="text-lg font-bold text-foreground">{title}</h2>
+              <h3 className="text-lg font-bold text-foreground">{title}</h3>
               <p className="mt-2 text-base text-muted-foreground">{desc}</p>
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+        <h2 className="text-center text-2xl font-extrabold text-foreground sm:text-3xl">
+          Our Approach
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-base text-muted-foreground sm:text-lg">
+          Our work is guided by:
+        </p>
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-6">
+          {approach.map(({ icon: Icon, title, desc, color, border }) => (
+            <article
+              key={title}
+              className="rounded-2xl border border-border/60 bg-surface/70 p-6 transition-all hover:border-neon-cyan/50"
+            >
+              <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl border ${border} ${color}`}>
+                <Icon className="h-6 w-6" />
+              </div>
+              <h3 className="text-lg font-bold text-foreground">{title}</h3>
+              <p className="mt-2 text-base text-muted-foreground">{desc}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <article className="rounded-2xl border border-border/60 bg-surface/70 p-6 sm:p-8">
+          <div className="flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-neon-purple/40 text-neon-purple">
+              <Globe2 className="h-6 w-6" />
+            </div>
+            <h2 className="text-2xl font-extrabold text-foreground sm:text-3xl">
+              Why Our Research Matters
+            </h2>
+          </div>
+          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+            In a world where health challenges are constantly evolving, research is not optional —
+            it is essential. From emerging diseases to long-standing conditions, our work
+            contributes to building a healthier, more informed future.
+          </p>
+        </article>
       </section>
     </PageShell>
   );
