@@ -123,6 +123,35 @@ function AboutPage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-eyebrow">
+            Leadership
+          </p>
+          <h2 className="mt-3 text-2xl font-extrabold text-foreground sm:text-3xl">
+            Meet Our <span className="text-gradient-brand">CEO</span>
+          </h2>
+        </div>
+        <article className="mx-auto mt-6 max-w-2xl rounded-2xl border border-border/60 bg-surface/70 p-6 text-center sm:mt-8 sm:p-8">
+          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-brand text-2xl font-extrabold text-white">
+            MM
+          </div>
+          <h3 className="mt-4 text-xl font-bold text-foreground sm:text-2xl">
+            Maher Al-Muhsini
+          </h3>
+          <p className="mt-1 text-lg text-muted-foreground" dir="rtl" lang="ar">
+            ماهر المحسني
+          </p>
+          <p className="mt-3 text-sm font-semibold uppercase tracking-wider text-neon-cyan">
+            Chief Executive Officer
+          </p>
+          <p className="mt-4 text-base text-muted-foreground">
+            Leading Ecomedic Squad with a vision rooted in scientific integrity, compassionate care,
+            and a relentless drive to transform health outcomes for communities worldwide.
+          </p>
+        </article>
+      </section>
+
       <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <article className="rounded-2xl border border-border/60 bg-surface/70 p-6 sm:p-8">
           <p className="text-base text-muted-foreground sm:text-lg">
