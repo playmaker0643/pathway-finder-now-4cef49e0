@@ -4,14 +4,14 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 
 type NavItem =
-  | { kind: "route"; to: "/" | "/about"; label: string; exact?: boolean }
+  | { kind: "route"; to: "/" | "/about" | "/research" | "/publications" | "/resources"; label: string; exact?: boolean }
   | { kind: "anchor"; href: string; label: string };
 
 const navItems: ReadonlyArray<NavItem> = [
   { kind: "route", to: "/", label: "Home", exact: true },
-  { kind: "anchor", href: "/#research", label: "Research" },
-  { kind: "anchor", href: "/#research", label: "Publications" },
-  { kind: "anchor", href: "/#research", label: "Resources" },
+  { kind: "route", to: "/research", label: "Research" },
+  { kind: "route", to: "/publications", label: "Publications" },
+  { kind: "route", to: "/resources", label: "Resources" },
   { kind: "route", to: "/about", label: "About Us" },
 ];
 
